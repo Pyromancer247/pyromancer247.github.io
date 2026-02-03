@@ -1,0 +1,64 @@
+body {
+    background-color: lightblue;
+    font-family: sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+#paragraph2 {
+    background-color: white;
+    border: 3px solid green;
+    padding: 15px;
+    width: 66.67%;
+    margin-left: 40px;
+    line-height: 1.5;
+}
+
+.blue {
+    background-color: darkblue;
+    color: white;
+    padding: 15px;
+}
+
+ol {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+ol li {
+    list-style: none;    
+    counter-increment: item;
+}
+
+ol li::before {
+    content: counter(item, decimal-leading-zero) ". "; 
+}    
+    
+ol li a {
+    color: darkblue;
+    text-decoration: underline;
+}
+
+a {
+    color: darkred;
+    text-decoration: none;
+}
+
+table {
+    border-collapse: collapse;
+    width: 50%
+}
+
+th {
+    background-color: lightgray;
+    border: 1px solid black;
+    padding: 8px;
+}
+
+td {
+    background-color: white;
+    border: 1px solid black;
+    padding: 8px;
+}
