@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pokemon Team Builder</title>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        #searchContainer {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px; 
+        }
+
+        #pokemonInput {
+            width: 280px;
+            height: 35px;
+            font-size: 18px;
+        }
+
+        #findBtn {
+            width: 150px;
+            height: 35px;
+            font-size: 18px;
+        }
+
+        #pokemonImage {
+            margin-top: 20px;
+            width: 320px;
+            height: 320px;
+        }
+
+        #movesContainer {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); 
+            gap: 0px; 
+            width: 70%; 
+            margin: 10px auto;
+        }
+
+        .moveSelect {
+            width: 90%;        
+            height: 30px;      
+            font-size: 16px;
+            margin: 0;         
+        }
+
+        #addBtn {
+            display: block;
+            margin: 15px auto 0 auto; 
+            padding: 8px 20px;        
+            font-size: 18px;
+            height: 35px;
+            width: auto;             
+            white-space: nowrap;     
+        }
+
+        .teamBox {
+            width: 60%;
+            margin: 20px auto;
+            padding: 15px;
+            border: 2px solid #333;
+            border-radius: 10px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr; 
+            height: 180px;  
+        }
+
+        .teamImg {
+            width: 120px;
+            height: 120px;
+            justify-self: center;
+            align-self: center; 
+        }
+
+        .teamMoves {
+            list-style-type: disc;
+            font-size: 18px;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;  
+            align-items: flex-start; 
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Name or ID</h2>
+
+    <div id="searchContainer">
+        <input id="pokemonInput" type="text">
+        <button id="findBtn">Find</button>
+    </div>
+
+    <img id="pokemonImage" src="MissingNo.png" alt="MissingNo">
+
+    <br>
+    <audio id="pokemonCry" controls></audio>
+
+    <div id="movesContainer">
+        <select class="moveSelect"></select>
+        <select class="moveSelect"></select>
+        <select class="moveSelect"></select>
+        <select class="moveSelect"></select>
+    </div>
+
+    <button id="addBtn">Add to Team</button>
+
+    <div id="teamContainer"></div>
+
+    <script src="javascript_fetch.js"></script>
+</body>
+</html>
